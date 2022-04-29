@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Loop Performance</title>
+
+  <style>
+    .container {
+      max-width: 760px;
+      padding: 0 10px;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>JS Loop Performance Test</h1>
+
+    <p>
+      This is a very simple JavaScript Loop Performance test. It consists in create a huge Array using
+      a given length on the input "Test Array Size" - which is 500.000 by default - and then loop over
+      this array using the 5 JavaScript loop types available: for, for/in, for/of, while, do-while. The
+      test uses ES5 notation for better browser compatibility and has no dependencies.
+    </p>
+
+    <p>
+      The results will appear in the format of title and time definition. 
+      The <strong>start</strong> label shows the time in ms that the loop started.
+      The <strong>end</strong> label shows the time in ms that loop ended.
+      And the <strong>time</strong> shows the total time the loop took to complete the operation.
+    </p>
+
+    <hr>
+
+    <form onsubmit="test(event)">
+      <label for="data-size">Test Array Size</label>
+      <input type="number" name="data-size" value="500000">
+
+      <button type="submit">Test</button>
+    </form>
+
+    <hr>
+
+    <dl id="results">
+      <dt>Hit the "Test" button and wait</dt>
+      <dd></dd>
+    </dl>
+  </div>
+
+  <script src="./test.js"></script>
+</body>
+</html>
